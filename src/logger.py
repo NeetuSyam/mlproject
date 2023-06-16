@@ -1,9 +1,19 @@
 import logging
-import os
+import os,sys
 from datetime import datetime
-
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 LOG_FILE=f"datetime.now().strftime('%m_%d_%Y_%H_%M_%S').log"
+# all the log file will start with the name log
 logs_path=os.path.join(os.getcwd(),"logs",LOG_FILE)
 os.makedirs(logs_path,exist_ok=True)
 
 LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE)
+
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s -%(message)s",
+    level=logging.INFO
+)
+# #to check if logging file is working
+# if __name__ =="__main__":
+#     logging.info("Logging has started")
