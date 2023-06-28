@@ -1,4 +1,6 @@
-Docker Setup In EC2 commands 
+## Student Performance Analysis 
+
+#### Docker Setup In EC2 commands 
 #optional
 
 sudo apt-get update -y
@@ -15,8 +17,10 @@ sudo usermod -aG docker ubuntu
 
 newgrp docker
 
-Configure EC2 as self-hosted runner:
+#### Configure EC2 as self-hosted runner:
+
 Setup github secrets:
+
 AWS_ACCESS_KEY_ID=
 
 AWS_SECRET_ACCESS_KEY=
